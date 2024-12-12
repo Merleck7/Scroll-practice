@@ -1,0 +1,34 @@
+/* Contenedor del carrusel */
+.carousel {
+    display: flex; /* Alinea los elementos horizontalmente */
+    overflow-x: auto; /* Activa el scroll horizontal */
+    scroll-snap-type: x mandatory; /* Desplazamiento "suave" entre elementos */
+    gap: 10px; /* Espacio entre elementos */
+    padding: 20px; /* Margen interno opcional */
+    scrollbar-width: none; /* Oculta el scroll en navegadores compatibles */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Oculta el scroll en navegadores basados en WebKit */
+}
+
+/* Elementos individuales del carrusel */
+.carousel-item {
+    flex: 0 0 auto; /* Impide que los elementos se reduzcan y asegura que mantengan su tamaño */
+    scroll-snap-align: center; /* Alinea el elemento al centro cuando se detiene */
+    width: 300px; /* Ancho de cada elemento (ajustable) */
+    height: 200px; /* Altura de cada elemento (ajustable) */
+    background-color: #ddd; /* Color de fondo opcional */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta contenido que sobresale */
+    display: flex; /* Centra el contenido dentro de cada elemento */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%; /* Ajusta las imágenes al ancho del contenedor */
+    height: 100%;
+    object-fit: cover; /* Ajusta las imágenes al espacio disponible sin deformarlas */
+}
